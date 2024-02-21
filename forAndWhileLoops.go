@@ -49,4 +49,11 @@ func main() {
 			break
 		}
 	}
+
+	arr := []int{1, 2, 3}
+
+	for _, num := range arr {
+		pl(num)
+
+	}
 }
