@@ -28,8 +28,22 @@ func returnTwoValues(x int, y int) (int, int) {
 	return (x + y), (x * y)
 }
 
+// Functions that returns erros as well
+
+func returnError(x float64, y float64) (ans float64, err error) {
+	if y == 0 {
+
+		return 0, fmt.Errorf("Denominator can not be zero please ")
+
+	} else {
+		return x / y, nil
+	}
+
+}
+
 func main() {
 
+	returnError(3.22, 0)
 	helloWorld()
 	getSum(10, 11)
 	returnTwoValues(11, 4)
