@@ -52,5 +52,9 @@ func main() {
 
 	slice1[0] = 8
 
+	slice1 = append(slice1, 12)
+	fmt.Println("See the append changes the slice but also the aray itself :", slice1)
+
 	fmt.Println("After the slice change the array is now : ", arr)
+	// Printing an index of empty slice will print nill , explore it yourslef
 }
