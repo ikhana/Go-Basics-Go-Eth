@@ -41,11 +41,23 @@ func returnError(x float64, y float64) (ans float64, err error) {
 
 }
 
+// Varaidic functions are those which recieves an unknown number of parameters
+
+func variadicFunction(x ...int) int {
+	sum := 0
+	for _, num := range x {
+		sum = sum + num
+	}
+
+	return sum
+}
+
 func main() {
 
-	returnError(3.22, 0)
+	fmt.Println(returnError(3.22, 0))
+	fmt.Println(returnError(3.22, 4))
 	helloWorld()
 	getSum(10, 11)
 	returnTwoValues(11, 4)
-
+	fmt.Println(variadicFunction(1, 2, 3, 3, 3))
 }
